@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(TestEditor))]
+[CustomEditor(typeof(Player))]
 public class PlayerEditor : Editor
 {
-    private Player testEditor;
+    private Player player;
 
     private bool playerInfoIsOpen = true;
     private bool playerStatsIsOpen = false;
 
     private void OnEnable()
     {
-        testEditor = (Player)target;
+        player = (Player)target;
     }
 
     public override void OnInspectorGUI()
     {
+        
+
         base.OnInspectorGUI();
     }
 }
