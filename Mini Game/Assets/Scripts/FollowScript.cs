@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class FollowScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public Vector3Variable playerPos;
+
+    public float speed =15;
+
+    private void Update()
     {
-        
+        Follow();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Follow()
     {
-        
+
+        Vector3 lookpoint = playerPos.vector;
+
+        lookpoint.y = transform.position.y;
+        transform.LookAt(lookpoint);
+
+        transform.Translate(Vector3.forward*Time.deltaTime*speed);
     }
+
+
 }
