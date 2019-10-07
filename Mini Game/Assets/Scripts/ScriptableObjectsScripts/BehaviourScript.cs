@@ -42,7 +42,7 @@ public class BehaviourScript : ScriptableObject
 
 
 
-        trans.rotation = Quaternion.Slerp(trans.rotation, targetRotation, rotationSpeed);
+        trans.rotation = Quaternion.Slerp(trans.rotation, targetRotation, rotationSpeed *Time.deltaTime);
 
         trans.Translate(Vector3.forward * Time.deltaTime * speed);
     }
