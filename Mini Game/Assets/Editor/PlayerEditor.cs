@@ -8,7 +8,7 @@ public class PlayerEditor : Editor
 {
     private Player player;
 
-    private bool playerStatsIsOpen = false;
+    private bool playerStatsIsOpen = true;
 
     private void OnEnable()
     {
@@ -17,18 +17,22 @@ public class PlayerEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        
+        base.OnInspectorGUI();
+        
         //EditorGUILayout.Space();
-        Player player = (Player)target;
+        //Player player = (Player)target;
         playerStatsIsOpen = EditorGUILayout.BeginFoldoutHeaderGroup(playerStatsIsOpen,"Player Stats");
         if (playerStatsIsOpen)
         {
-            player.movespeed = EditorGUILayout.Slider(player.movespeed,1f,50f);
-            player.rotationspeed = EditorGUILayout.Slider(player.rotationspeed, 0f, 10f);
+
+            player.movespeed = EditorGUILayout.Slider("Move Speed",player.movespeed,1f,50f);
+            EditorGUILayout.Space();
+            player.rotationspeed = EditorGUILayout.Slider("Rotation Speed", player.rotationspeed, 1f, 50f);
         }
 
         EditorGUILayout.EndFoldoutHeaderGroup();
+        EditorUtility.SetDirty(player);
 
-
-        base.OnInspectorGUI();
     }
 }
