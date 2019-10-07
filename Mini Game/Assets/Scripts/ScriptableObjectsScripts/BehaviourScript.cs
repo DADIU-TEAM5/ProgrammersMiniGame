@@ -12,10 +12,9 @@ public class BehaviourScript : ScriptableObject
     [Range(1,50)]
     public float speed = 1;
 
-
     float currentTime;
-    //[HideInInspector]
-    [Range(1, 50)]
+    [HideInInspector]
+    //[Range(1, 50)]
     public float rotationSpeed;
     [HideInInspector]
     public int waitSeconds;

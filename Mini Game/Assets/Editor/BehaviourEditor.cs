@@ -20,11 +20,18 @@ public class BehaviorEditor : Editor
 
         //EditorGUILayout.Space();
         //Player player = (Player)target;
+
+
         if(behaviourScript.behaviour == BehaviourScript.Behaviour.Wander)
         {
-            //behaviourScript.rotationSpeed = EditorGUILayout.Slider("rotationSpeed", behaviourScript.rotationSpeed, 0f, 50f);
+            behaviourScript.rotationSpeed = EditorGUILayout.Slider("rotationSpeed", behaviourScript.rotationSpeed, 0f, 20f);
             //EditorGUILayout.Space();
             behaviourScript.waitSeconds = (int)EditorGUILayout.Slider("waitSeconds", behaviourScript.waitSeconds, 0f, 50f);
+        }
+        else if (behaviourScript.behaviour == BehaviourScript.Behaviour.Follow)
+        {
+            behaviourScript.rotationSpeed = EditorGUILayout.Slider("rotationSpeed", behaviourScript.rotationSpeed, 0f, 1f);
+
         }
         EditorUtility.SetDirty(behaviourScript);
 
