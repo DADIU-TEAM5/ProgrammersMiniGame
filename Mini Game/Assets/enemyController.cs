@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class enemyController : MonoBehaviour
 {
+    public BehaviourScript BehaviourScript;
+
+
     // Start is called before the first frame update
+
     void Start()
     {
         
@@ -13,6 +17,10 @@ public class enemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (BehaviourScript != null)
+        {
+            BehaviourScript.behaviour.doBehaviour();
+        }
         
     }
 }
