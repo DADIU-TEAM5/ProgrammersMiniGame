@@ -19,7 +19,7 @@ public class enemyController : MonoBehaviour
     {
         if (BehaviourScript != null)
         {
-            BehaviourScript.behaviour.doBehaviour();
+            BehaviourScript.DoBehaviour(transform);
         }
         
     }

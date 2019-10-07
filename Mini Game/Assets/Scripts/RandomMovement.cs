@@ -10,6 +10,8 @@ public class RandomMovement : MonoBehaviour
     private float randomNumberSpeed;
     private float randomNumberRotation;
 
+    float currentTime;
+
     private void Start()
     {
         StartCoroutine(RandomSwitch(waitSeconds));
@@ -18,6 +20,14 @@ public class RandomMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentTime += Time.deltaTime;
+        if(currentTime>= waitSeconds)
+        {
+            randomNumberSpeed = Random.Range(1f, 5f);
+            randomNumberRotation = Random.Range(-50.0f, 50.0f);
+        }
+
+
         transform.Translate(Vector3.forward * Time.deltaTime * randomNumberSpeed * moveSpeed);
         transform.Rotate(Vector3.up, Time.deltaTime * randomNumberRotation * rotationSpeed);
     }
@@ -27,8 +37,7 @@ public class RandomMovement : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(seconds);
-            randomNumberSpeed = Random.Range(1f, 5f);
-            randomNumberRotation = Random.Range(-50.0f, 50.0f);
+           
         }
             
     }
