@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(TestEditor))]
+[CustomEditor(typeof(Player))]
 public class PlayerEditor : Editor
 {
     private Player player;
