@@ -25,9 +25,10 @@ public class PlayerEditor : Editor
         playerStatsIsOpen = EditorGUILayout.BeginFoldoutHeaderGroup(playerStatsIsOpen,"Player Stats");
         if (playerStatsIsOpen)
         {
-            player.movespeed = EditorGUILayout.Slider(player.movespeed,1f,50f);
+
+            player.movespeed = EditorGUILayout.Slider("Move Speed",player.movespeed,1f,50f);
             EditorGUILayout.Space();
-            player.rotationspeed = EditorGUILayout.Slider(player.rotationspeed, 0f, 10f);
+            player.rotationspeed = EditorGUILayout.Slider("Rotation Speed", player.rotationspeed, 0f, 10f);
         }
 
         EditorGUILayout.EndFoldoutHeaderGroup();
