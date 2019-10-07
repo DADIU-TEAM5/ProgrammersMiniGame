@@ -13,8 +13,9 @@ public class BehaviourScript : ScriptableObject
 
 
     float currentTime;
-
+    [HideInInspector]
     public float rotationSpeed;
+    [HideInInspector]
     public int waitSeconds;
     private float randomNumberSpeed;
     private float randomNumberRotation;
