@@ -6,18 +6,14 @@ using UnityEditor;
 [CustomEditor(typeof(TestEditor))]
 public class PlayerEditor : Editor
 {
-    private TestEditor testEditor;
+    private Player testEditor;
 
     private bool playerInfoIsOpen = true;
     private bool playerStatsIsOpen = false;
 
     private void OnEnable()
     {
-        testEditor = (TestEditor)target;
-        if(testEditor.playerStats == null)
-        {
-            testEditor.playerStats = "test";
-        }
+        testEditor = (Player)target;
     }
 
     public override void OnInspectorGUI()
