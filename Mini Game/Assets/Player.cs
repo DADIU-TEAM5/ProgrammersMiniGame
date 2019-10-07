@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(movespeed);
         moveSpeed.Value = movespeed;
         rotationSpeed.Value = movespeed;
     }

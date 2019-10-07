@@ -8,7 +8,7 @@ public class PlayerEditor : Editor
 {
     private Player player;
 
-    private bool playerStatsIsOpen = false;
+    private bool playerStatsIsOpen = true;
 
     private void OnEnable()
     {
@@ -28,11 +28,11 @@ public class PlayerEditor : Editor
 
             player.movespeed = EditorGUILayout.Slider("Move Speed",player.movespeed,1f,50f);
             EditorGUILayout.Space();
-            player.rotationspeed = EditorGUILayout.Slider("Rotation Speed", player.rotationspeed, 0f, 10f);
+            player.rotationspeed = EditorGUILayout.Slider("Rotation Speed", player.rotationspeed, 1f, 50f);
         }
 
         EditorGUILayout.EndFoldoutHeaderGroup();
-
+        EditorUtility.SetDirty(player);
 
     }
 }
