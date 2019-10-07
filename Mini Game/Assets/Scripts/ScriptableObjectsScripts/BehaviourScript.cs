@@ -9,11 +9,13 @@ public class BehaviourScript : ScriptableObject
     public Behaviour behaviour;
     public Vector3Variable playerPos;
 
+    [Range(1,50)]
     public float speed = 1;
 
 
     float currentTime;
-    [HideInInspector]
+    //[HideInInspector]
+    [Range(1, 50)]
     public float rotationSpeed;
     [HideInInspector]
     public int waitSeconds;

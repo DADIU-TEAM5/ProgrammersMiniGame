@@ -22,8 +22,8 @@ public class BehaviorEditor : Editor
         //Player player = (Player)target;
         if(behaviourScript.behaviour == BehaviourScript.Behaviour.Wander)
         {
-            behaviourScript.rotationSpeed = EditorGUILayout.Slider("rotationSpeed", behaviourScript.rotationSpeed, 0f, 50f);
-            EditorGUILayout.Space();
+            //behaviourScript.rotationSpeed = EditorGUILayout.Slider("rotationSpeed", behaviourScript.rotationSpeed, 0f, 50f);
+            //EditorGUILayout.Space();
             behaviourScript.waitSeconds = (int)EditorGUILayout.Slider("waitSeconds", behaviourScript.waitSeconds, 0f, 50f);
         }
         EditorUtility.SetDirty(behaviourScript);
