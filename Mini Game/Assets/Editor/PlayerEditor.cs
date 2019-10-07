@@ -17,18 +17,21 @@ public class PlayerEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        
+        base.OnInspectorGUI();
+        
         //EditorGUILayout.Space();
-        Player player = (Player)target;
+        //Player player = (Player)target;
         playerStatsIsOpen = EditorGUILayout.BeginFoldoutHeaderGroup(playerStatsIsOpen,"Player Stats");
         if (playerStatsIsOpen)
         {
             player.movespeed = EditorGUILayout.Slider(player.movespeed,1f,50f);
+            EditorGUILayout.Space();
             player.rotationspeed = EditorGUILayout.Slider(player.rotationspeed, 0f, 10f);
         }
 
         EditorGUILayout.EndFoldoutHeaderGroup();
 
 
-        base.OnInspectorGUI();
     }
 }
