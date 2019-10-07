@@ -21,6 +21,11 @@ public class enemyController : MonoBehaviour
         {
             BehaviourScript.DoBehaviour(transform);
         }
+
+        if(transform.position.y <= -30)
+        {
+            Destroy(gameObject);
+        }
         
     }
 }

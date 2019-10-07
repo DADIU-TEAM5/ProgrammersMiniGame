@@ -9,12 +9,14 @@ public class BehaviourScript : ScriptableObject
     public Behaviour behaviour;
     public Vector3Variable playerPos;
 
+    [Range(1,50)]
     public float speed = 1;
 
-
     float currentTime;
-
+    [HideInInspector]
+    //[Range(1, 50)]
     public float rotationSpeed;
+    [HideInInspector]
     public int waitSeconds;
     private float randomNumberSpeed;
     private float randomNumberRotation;
@@ -33,9 +35,14 @@ public class BehaviourScript : ScriptableObject
     void Follow(Transform trans)
     {
         Vector3 lookpoint = playerPos.vector;
-
         lookpoint.y = trans.position.y;
-        trans.LookAt(lookpoint);
+
+        Quaternion targetRotation = Quaternion.LookRotation(lookpoint - trans.position);
+
+
+
+
+        trans.rotation = Quaternion.Slerp(trans.rotation, targetRotation, rotationSpeed);
 
         trans.Translate(Vector3.forward * Time.deltaTime * speed);
     }
