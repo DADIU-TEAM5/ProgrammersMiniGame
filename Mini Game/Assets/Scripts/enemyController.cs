@@ -20,7 +20,7 @@ public class enemyController : MonoBehaviour
     {
 
 
-        if (BehaviourScript != null && grounded)
+        if (BehaviourScript != null)
         {
             BehaviourScript.DoBehaviour(transform);
         }
