@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     public float movespeed;
     [HideInInspector]
     public float rotationspeed;
+
+
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,10 @@ public class Player : MonoBehaviour
 
         transform.Translate(Vector3.forward * Time.deltaTime * Input.GetAxis("Vertical") * moveSpeed.Value);
         transform.Rotate(Vector3.up, Time.deltaTime * Input.GetAxis("Horizontal") * rotationSpeed.Value*4);
+
+
+
+        anim.SetBool("Moving",(Input.GetAxisRaw("Horizontal") != 0)|| (Input.GetAxisRaw("Vertical") != 0));
 
 
 
