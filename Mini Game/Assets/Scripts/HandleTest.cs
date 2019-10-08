@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class HandleTest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [HideInInspector]
+    public Color ObjectColor;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        GetComponent<Renderer>().material.color = ObjectColor;
     }
 }

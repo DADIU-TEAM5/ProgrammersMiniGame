@@ -65,6 +65,18 @@ public class enemyController : MonoBehaviour
         {
             grounded = false;
         }
+
+       
+
+    }
+
+    private void OnParticleCollision(GameObject collision)
+    {
+        Debug.Log("enter!");
+      
+        Destroy(gameObject);
+
+        
     }
 
 }

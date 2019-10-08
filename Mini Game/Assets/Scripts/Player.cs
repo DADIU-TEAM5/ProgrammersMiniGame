@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public FloatVariable rotationSpeed;
     [Space(5)]
     public Vector3Variable playerPosition;
-
+    public ParticleSystem particle;
 
     [HideInInspector]
     public float movespeed;
@@ -42,8 +42,8 @@ public class Player : MonoBehaviour
         anim.SetBool("Moving",(Input.GetAxisRaw("Horizontal") != 0)|| (Input.GetAxisRaw("Vertical") != 0));
 
 
-
-        
+        if (Input.GetButtonDown("Fire1"))
+            particle.Emit(1);
 
     }
     private void OnCollisionEnter(Collision collision)

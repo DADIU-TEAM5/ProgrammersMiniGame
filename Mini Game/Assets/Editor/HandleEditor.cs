@@ -4,13 +4,16 @@ using UnityEditor;
 [CustomEditor(typeof(HandleTest))]
 public class HandleEditor : Editor
 {
-
     int windowID = 1234;
     Rect windowRect;
+    HandleTest component;
+    Color matColor = Color.white;
+    
+
     void OnSceneGUI()
     {
 
-        var component = target as HandleTest;
+        component = target as HandleTest;
 
         GUIWindow();
     }
@@ -22,10 +25,9 @@ public class HandleEditor : Editor
         {
             GUI.contentColor = Color.black;
             EditorGUILayout.LabelField("Label");
-            EditorGUILayout.ColorField(Color.cyan);
-            EditorGUILayout.ToggleLeft("Toggle", false);
-            GUILayout.Button("Button");
-            GUI.DragWindow();
+            matColor = EditorGUILayout.ColorField("New Color", matColor);
+            if(GUILayout.Button("Change Color"))
+                component.ObjectColor = matColor;
         }, "Window", GUILayout.Width(100));
     }
 
