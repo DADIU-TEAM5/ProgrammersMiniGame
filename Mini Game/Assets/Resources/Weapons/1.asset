@@ -51,5 +51,7 @@ MonoBehaviour:
       stat: 5
     scale:
       stat: 5
-  upgradesTo: []
-  upgradesFrom: []
+  upgradesTo:
+  - {fileID: 11400000, guid: d3b1167c447e31f43a3d25ee3dfbc4db, type: 2}
+  upgradesFrom:
+  - {fileID: 11400000, guid: c8871bd05ffb6fa4bac31edbf8f79239, type: 2}

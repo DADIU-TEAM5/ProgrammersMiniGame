@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83d8835de93e6ac48803d9148bea6065, type: 3}
-  m_Name: Flameing Sword
+  m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Flameing Sword
   minimumStats:
@@ -52,4 +52,5 @@ MonoBehaviour:
     scale:
       stat: 5
   upgradesTo: []
-  upgradesFrom: []
+  upgradesFrom:
+  - {fileID: 11400000, guid: bbacc12c827108c4dba0fe47280f406b, type: 2}
