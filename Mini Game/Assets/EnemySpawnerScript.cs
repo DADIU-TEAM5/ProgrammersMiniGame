@@ -35,9 +35,9 @@ public class EnemySpawnerScript : MonoBehaviour
             }
 
         }
-        
 
-        
+
+
     }
 
     void SpawnEnemies(int enemNumb)
@@ -46,7 +46,7 @@ public class EnemySpawnerScript : MonoBehaviour
 
 
 
-        
+
             float randomX = Random.Range(-planeSize.Value.x*0.1f, planeSize.Value.x * 0.1f);
             float randomZ = Random.Range(-planeSize.Value.y * 0.1f, planeSize.Value.y * 0.1f);
 
@@ -55,9 +55,9 @@ public class EnemySpawnerScript : MonoBehaviour
 
             GameObject newEnemy = GameObject.Instantiate(enemies[enemNumb], temp, tempQ);
             ec = newEnemy.GetComponent<enemyController>();
-            
 
-        
+
+
     }
 
 

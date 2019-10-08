@@ -55,7 +55,16 @@ public class enemyController : MonoBehaviour
     //    }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
+    }
+
 }
-
-
-

@@ -15,5 +15,5 @@ MonoBehaviour:
   behaviour: 0
   playerPos: {fileID: 11400000, guid: a4bc3e2b001ce5a40947c36609ef3925, type: 2}
   speed: 10
-  rotationSpeed: 2
+  rotationSpeed: 1
   waitSeconds: 2
