@@ -19,7 +19,8 @@ public class enemyController : MonoBehaviour
     void Update()
     {
 
-        if (BehaviourScript != null && grounded)
+
+        if (BehaviourScript != null)
         {
             BehaviourScript.DoBehaviour(transform);
         }
@@ -67,6 +68,3 @@ public class enemyController : MonoBehaviour
     }
 
 }
-
-
-

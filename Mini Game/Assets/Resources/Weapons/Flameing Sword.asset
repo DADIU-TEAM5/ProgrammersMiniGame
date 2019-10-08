@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d8835de93e6ac48803d9148bea6065, type: 3}
+  m_Name: Flameing Sword
+  m_EditorClassIdentifier: 
+  weaponName: Flameing Sword
+  minimumStats:
+    attack:
+      stat: 10
+    durability:
+      stat: 30
+    flame:
+      stat: 10
+    chill:
+      stat: 0
+    lightning:
+      stat: 0
+    cyclone:
+      stat: 0
+    exorcism:
+      stat: 0
+    beast:
+      stat: 0
+    scale:
+      stat: 0
+  requirementsToMeet:
+    attack:
+      stat: 10
+    durability:
+      stat: 30
+    flame:
+      stat: 5
+    chill:
+      stat: 5
+    lightning:
+      stat: 5
+    cyclone:
+      stat: 5
+    exorcism:
+      stat: 5
+    beast:
+      stat: 5
+    scale:
+      stat: 5
+  upgradesTo: []
+  upgradesFrom:
+  - {fileID: 11400000, guid: bbacc12c827108c4dba0fe47280f406b, type: 2}
