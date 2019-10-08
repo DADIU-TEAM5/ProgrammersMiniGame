@@ -35,9 +35,14 @@ public class BehaviourScript : ScriptableObject
     void Follow(Transform trans)
     {
         Vector3 lookpoint = playerPos.vector;
-
         lookpoint.y = trans.position.y;
-        trans.LookAt(lookpoint);
+
+        Quaternion targetRotation = Quaternion.LookRotation(lookpoint - trans.position);
+
+
+
+
+        trans.rotation = Quaternion.Slerp(trans.rotation, targetRotation, rotationSpeed *Time.deltaTime);
 
         trans.Translate(Vector3.forward * Time.deltaTime * speed);
     }
