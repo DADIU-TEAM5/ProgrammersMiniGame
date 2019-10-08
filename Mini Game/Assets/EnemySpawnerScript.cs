@@ -8,6 +8,7 @@ public class EnemySpawnerScript : MonoBehaviour
     public Vector2Variable planeSize;
     private enemyController ec;
     private float spawnTime = 0;
+    public Behaviour enemyBehavior;
 
 
     void Update()
@@ -35,7 +36,6 @@ public class EnemySpawnerScript : MonoBehaviour
             GameObject newEnemy = GameObject.Instantiate(enemySpawner.enemy, temp, tempQ);
             ec = newEnemy.GetComponent<enemyController>();
             ec.BehaviourScript = enemySpawner.behaviourScript;
-
         }
     }
 

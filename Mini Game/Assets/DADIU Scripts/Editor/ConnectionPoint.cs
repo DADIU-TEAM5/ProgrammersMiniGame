@@ -8,13 +8,13 @@ public class ConnectionPoint {
 
 	public ConnectionPointType type;
 
-	public Node node;
+	public Node2 node;
 
 	public GUIStyle style;
 
 	public Action<ConnectionPoint> OnClickConnectionPoint;
 
-	public ConnectionPoint ( Node node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint ) {
+	public ConnectionPoint ( Node2 node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint ) {
 		this.node = node;
 		this.type = type;
 		this.style = style;

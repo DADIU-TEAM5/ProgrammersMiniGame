@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
@@ -197,7 +197,7 @@ public class NodeBasedEditor : EditorWindow {
 
 	private void ProcessContextMenu ( Vector2 mousePosition ) {
 		GenericMenu genericMenu = new GenericMenu ();
-		genericMenu.AddItem ( new GUIContent ( "Add Weapon" ), false, () => OnClickAddNode ( mousePosition, new DrawableWeapon () ) );
+		genericMenu.AddItem ( new GUIContent ( "Add Weapon" ), false, () => OnClickAddNode ( mousePosition, new DrawableType () ) );
 		//genericMenu.AddItem ( new GUIContent ( "Add node" ), false, () => OnClickAddNode ( mousePosition ) );
 		genericMenu.ShowAsContext ();
 	}
@@ -287,6 +287,8 @@ public class NodeBasedEditor : EditorWindow {
 		selectedOutPoint = null;
 	}
 
+
+    // SAVES THE NODES
 	private void SaveNodes () {
 		string path = "Assets/Resources/Weapons";
 
@@ -302,8 +304,8 @@ public class NodeBasedEditor : EditorWindow {
 		List<Node> nodesPassed = new List<Node> ();
 
 		foreach ( Node n in nodes ) {
-			if ( n.myInfo as DrawableWeapon != null) {
-				Weapon w = ( n.myInfo as DrawableWeapon ).GetWeapon ();
+			if ( n.myInfo as DrawableType != null) {
+				Weapon w = ( n.myInfo as DrawableType ).GetWeapon ();
 
 				w = CreateOrReplaceAsset ( w, path + "/" + w.weaponName + ".asset" );
 
@@ -350,4 +352,4 @@ public class NodeBasedEditor : EditorWindow {
 
 		return existingAsset;
 	}
-}
+}*/

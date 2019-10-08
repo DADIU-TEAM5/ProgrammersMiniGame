@@ -19,7 +19,6 @@ public class enemyController : MonoBehaviour
     void Update()
     {
 
-
         if (BehaviourScript != null && grounded)
         {
             BehaviourScript.DoBehaviour(transform);
@@ -53,6 +52,18 @@ public class enemyController : MonoBehaviour
     //            float lift = hoverError * hoverForce - upwardSpeed * hoverDamp;
     //        }
     //    }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
     }
 
 }
