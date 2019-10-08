@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde67f1ae59f2864ea3224c82300ab93, type: 3}
   m_Name: New Behaviour Script
   m_EditorClassIdentifier: 
-  behaviour: 0
+  behaviour: 1
   playerPos: {fileID: 11400000, guid: a4bc3e2b001ce5a40947c36609ef3925, type: 2}
-  speed: 2
-  rotationSpeed: 10
+  speed: 1.6
+  rotationSpeed: 13.3
   waitSeconds: 2
